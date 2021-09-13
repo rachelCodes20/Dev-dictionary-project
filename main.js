@@ -20,7 +20,12 @@ const PORT = 3000;
 //     console.log('Connected to Database!');
 //   });
 
-app.use("/", (req, res) => res.send("hello"));
+app.use("/", (req, res, next) => {
+ 
+    res.send("hello")
+ 
+  });
+
 const apiRouter = require(path.join(__dirname, '/routers.js'));
 
 app.use(express.urlencoded({ extended: true }));

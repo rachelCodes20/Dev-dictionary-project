@@ -4,11 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // entry: ["react-hot-loader/patch", './index.js'],
-  entry: ['./index.js'],
+  entry: './index.js',
   mode: 'development', 
   output: { 
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   devServer: {
     host: 'localhost',
@@ -18,6 +19,7 @@ module.exports = {
         '/main/**':{
           target: 'http://localhost:3000/',
           secure: false,
+          changeOrigin: true
       }
     }
   },

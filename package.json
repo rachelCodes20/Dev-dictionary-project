@@ -1,5 +1,5 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "dev_dictionary",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack",
     "dev": "webpack serve --open",
-    "start": "nodemon main.js"
+    "server": "nodemon main.js",
+    "start": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "Rae Collins",
@@ -25,7 +26,6 @@
     "webpack-dev-server": "^4.2.0"
   },
   "dependencies": {
-    "@hot-loader/react-dom": "^17.0.1",
     "lodash": "^4.17.21",
     "mongoose": "^6.0.5",
     "nodemon": "^2.0.12",
