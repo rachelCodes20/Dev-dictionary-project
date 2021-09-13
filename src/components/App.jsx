@@ -1,9 +1,17 @@
 //import { create } from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-
+/*{<Navbar/>
+         <h1> Hi! Welcome to the Dev's Dictionary. </h1>
+         <Welcome/>
+         <DictionaryStream url={this.state.url}/> }*/
 class App extends React.Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      defTerms: [{url: 'mongo url?'}]
+    }
+  }
 render () {
     return (
     <div>

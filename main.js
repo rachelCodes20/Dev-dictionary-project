@@ -20,19 +20,19 @@ const PORT = 3000;
 //     console.log('Connected to Database!');
 //   });
 
-app.use("/", (req, res, next) => {
+// app.use("/", (req, res, next) => {
  
-    res.send("hello")
+//     res.send("hello")
  
-  });
+//   });
 
-const apiRouter = require(path.join(__dirname, '/routers.js'));
+const apiRouter = require(path.join(__dirname, './routers.js'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const termRouter = express.Router()
-app.use('/term', termRouter);
+//app.use('/term', termRouter);
 
 // const data = {
 //   termName: 'object',
@@ -54,13 +54,22 @@ app.use('/term', termRouter);
   // })
  
     // console.log('mongoose', mongoose)
-    
+    termRouter.get('/create', termController.createTerm);
 
     // termRouter.post('/', termController.createTerm);
 
     termRouter.get('/:term', termController.getTerm);
   
-
-  //add global erro handler
+    function errorHandler (err, req, res, next) {
+      const defaultError = {
+        log: 'Express error handler caught unknown middleware error',
+        status: 400,
+        message: { err: 'An error occurred' }, 
+      };
+      const errorObj = Object.assign(defaultError, err);
+      console.log(errorObj.log);
+      res.status(errorObj.status).send(JSON.stringify(errorObj.message));
+    }
+  //add global error handler
 
   app.listen(PORT, () => {console.log(`listening on port ${PORT}`)});
