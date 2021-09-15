@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack",
-    "dev": "webpack serve --open",
-    "server": "nodemon main.js",
+    "dev": "webpack serve --open & nodemon server/main.js",
+    "server": "nodemon server/main.js",
     "start": "webpack-dev-server --mode development"
   },
   "keywords": [],
@@ -26,10 +26,12 @@
     "webpack-dev-server": "^4.2.0"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.0.5",
     "nodemon": "^2.0.12",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.1"
   }
 }

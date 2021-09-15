@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.titles{
+    font-family: 'Luckiest Guy', cursive;
+}
+.searchBar{
+height:30px;
+width:200px;
+}
+.navBar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display:inline-block;
+    padding: 10px;
+    border : 1px solid #555;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.terms{
+   
+
+}
 .hello {
     color: turquoise;
+}
+
+.devTerms{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

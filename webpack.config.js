@@ -16,7 +16,7 @@ module.exports = {
     port: 8080,
     open: true,
     proxy: {
-        '/main/**':{
+        '/':{
           target: 'http://localhost:3000/',
           secure: false,
           changeOrigin: true
