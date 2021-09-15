@@ -1,4 +1,3 @@
-const {termName, termDefinition} = require('./term-model')
 const express = require('express');
 
 const termController = require('./termController');

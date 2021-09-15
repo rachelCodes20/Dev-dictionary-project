@@ -9,14 +9,14 @@ import termController from '../../server/termController';
          <Welcome/>
          <DictionaryStream url={this.state.url}/> }*/
 
-const Button = styled.button`
-background: transparent;
-border-radius: 3px;
-border: 2px solid turquoise;
-color: blue;
-margin: 0 1em;
-padding: 0.25em 1em;
-`
+// const Button = styled.button`
+// background: transparent;
+// border-radius: 3px;
+// border: 2px solid turquoise;
+// color: blue;
+// margin: 0 1em;
+// padding: 0.25em 1em;
+// `
 
 
 class App extends React.Component {
@@ -27,9 +27,7 @@ class App extends React.Component {
     }
     
   }
-  termRequested () {
-  console.log(`send entire object back to the client`)
-    }
+ 
 render () {
     return (
     <div>
@@ -42,7 +40,7 @@ render () {
           <form>
             <input type="text" placeholder="Enter Dev Term" class="searchBar"/>
           </form>
-          <p><Button onClick={()=>{termRequested}}>Search!</Button></p>
+          <p><Button>Search!</Button></p>
           <Dictionary/>
     </div>
     )
