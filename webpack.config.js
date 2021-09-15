@@ -3,7 +3,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // entry: ["react-hot-loader/patch", './index.js'],
   entry: './index.js',
   mode: 'development', 
   output: { 
