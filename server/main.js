@@ -5,7 +5,6 @@ const app = express();
 
 const mongoose = require('mongoose');
 const termController = require('./termController');
-const { resolveSoa } = require('dns');
 const dotenv = require('dotenv').config();
 const PORT = 3000;
 
@@ -24,11 +23,11 @@ mongoose.connect(process.env.MONGO_URI , {
   );
 
 
-// app.use(express.urlencoded({ extended: true }));
-//  app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+ app.use(express.json());
 
 //static file req example
-//app.use('/images', express.static(path.resolve(__dirname, '../client/assets'))); 
+app.use('/images', express.static(path.resolve(__dirname, '../client/assets'))); 
 //post request to /search
 
 // test --- app.use('/search', (req,res) => {

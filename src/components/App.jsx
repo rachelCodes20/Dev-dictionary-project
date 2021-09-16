@@ -2,21 +2,20 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import styled from 'styled-components'
-import termController from '../../server/termController';
 
 /*{<Navbar/>
          <h1> Hi! Welcome to the Dev's Dictionary. </h1>
          <Welcome/>
          <DictionaryStream url={this.state.url}/> }*/
 
-// const Button = styled.button`
-// background: transparent;
-// border-radius: 3px;
-// border: 2px solid turquoise;
-// color: blue;
-// margin: 0 1em;
-// padding: 0.25em 1em;
-// `
+const Button = styled.button`
+background: transparent;
+border-radius: 3px;
+border: 2px solid turquoise;
+color: blue;
+margin: 0 1em;
+padding: 0.25em 1em;
+`
 
 
 class App extends React.Component {

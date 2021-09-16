@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './index.js',
   mode: 'development', 
+  // target: "node",
+  // externals: {express: 'express'},
   output: { 
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -14,13 +16,13 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     open: true,
-    proxy: {
-        '/':{
-          target: 'http://localhost:3000/',
-          secure: false,
-          changeOrigin: true
-      }
-    }
+    // proxy: {
+    //     '/':{
+    //       target: 'http://localhost:3000/',
+    //       secure: false,
+    //       changeOrigin: true
+    //   }
+    // }
   },
   module: {
     rules: [
