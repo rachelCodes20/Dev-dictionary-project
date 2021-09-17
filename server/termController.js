@@ -65,7 +65,7 @@ termController.getTerm = async (req,res,next) => {
             //turn into json !
             return res.status(200).json(retrievedTerm)
             
-            // res.send(retrievedTerm);
+            res.send(retrievedTerm);
         }
             catch(err){
             return res.status(404).send(err)

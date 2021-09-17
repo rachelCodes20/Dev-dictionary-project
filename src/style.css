@@ -1,38 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-.titles{
+.titles {
     font-family: 'Luckiest Guy', cursive;
+    font-size: 70px;
+    text-align: right;
+    border: 10px solid aqua;
+    padding:20px;
+    border-radius:10px;
+    background-color: aqua;
 }
-.searchBar{
+.searchBar {
 height:30px;
 width:200px;
 }
-.navBar{
+.navBar {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: inline;
+   
 }
 
-li{
+/* li{
     display:inline-block;
     padding: 10px;
     border : 1px solid #555;
     margin: 10px;
     border-radius: 10px;
+} */
 
+.navItem {
+    display: inline;
+    padding: 5px;
+    border: 2px solid aqua; 
+    font-weight: bold;
 }
 
-.terms{
-   
+ .terms {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: block;
+} 
 
-}
-.hello {
-    color: turquoise;
+.def {
+    /* display: block; */
+    padding-left: 20px;
+    font-size: 20px;
 }
 
 .devTerms{
     display: inline;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    /* padding: 50px; */
+    font-size: 40px;
 }

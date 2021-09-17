@@ -1,7 +1,9 @@
 //import { create } from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Dictionary from './Dictionary-Stream.jsx';
+
 
 /*{<Navbar/>
          <h1> Hi! Welcome to the Dev's Dictionary. </h1>
@@ -22,38 +24,50 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      defTerms: [{url: 'mongo url?'}]
+      defTerms: [{url: 'mongo url?'}],
+      userEntry: "",
     }
     
   }
- 
+
 render () {
+
     return (
     <div>
         <div>
           <NavBar/>
         </div>
-        <h1 class="titles"> Hi! Welcome to the Dev's Dictionary. </h1>
+        <h1 className="titles" > Welcome to the Dev's Dictionary! </h1>
           <hr/>
         <Welcome />
-          <form>
-            <input type="text" placeholder="Enter Dev Term" class="searchBar"/>
-          </form>
-          <p><Button>Search!</Button></p>
-          <Dictionary/>
+        <Dictionary userEntry={this.state.userEntry}/>
     </div>
     )
   }   
 }
 
 class Welcome extends React.Component {
+  constructor(props) {
+    super(props) 
+    // this.state = {
+    // displayProp: inline
+    // }
+  }
+ 
   render () {
+    const bGround = {
+      backgroundColor:"rgb(60, 60, 60, 0.5)",
+      padding:"30px",
+      margin:"10px",
+      borderRadius:"5px"
+    }
     return (
-      <div>
+      <div style={{...bGround}}>
         <p> You are probably here because you don't know what the 
           heck Stackoverflow is talking about. Don't worry! In time
-          you will and I'm here to help. 
+          you will.Until then, I'm here to help. 
         </p>
+       
       </div>
     )
   }
@@ -62,27 +76,15 @@ class Welcome extends React.Component {
 class NavBar extends React.Component {
   render () {
     return (
-      <ul class="navBar">
-        <li class="terms"> Home</li>
-        <li class="terms"><a href=""></a>Search</li>
-        <li class="terms"><a href=""></a>Quiz Me!</li>
+      <ul className="navBar">
+        <li className="navItem"> Home</li>
+        <li className="navItem"><a href=""></a>Search</li>
+        <li className="navItem"><a href=""></a>Quiz Me!</li>
       </ul>
     )
   }
 }
 
-class Dictionary extends React.Component {
-  render(){
-    return (
-      <ul class="devTerms">
-        <li >Object</li>
-        <li >Function</li>
-        <li >Const</li>
-        <li >Let</li>
-  </ul>
-    )
-  }
-}
 ReactDOM.render(<App/>, document.getElementById('root'));
 
 export default App;
