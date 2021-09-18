@@ -11,14 +11,14 @@ import image from '../images/js-object-.png';
          <Welcome/>
          <DictionaryStream url={this.state.url}/> }*/
 
-const Button = styled.button`
-background: transparent;
-border-radius: 3px;
-border: 2px solid turquoise;
-color: blue;
-margin: 0 1em;
-padding: 0.25em 1em;
-`
+// const Button = styled.button`
+// background: transparent;
+// border-radius: 3px;
+// border: 2px solid turquoise;
+// color: blue;
+// margin: 0 1em;
+// padding: 0.25em 1em;
+// `
 
 
 class App extends React.Component {
@@ -35,7 +35,6 @@ class App extends React.Component {
   //   this.setState({userEntry: event.target.value})
   // }
 render () {
-
     return (
     <div>
         <div>
@@ -59,14 +58,15 @@ class Welcome extends React.Component {
   }
  
   render () {
-    const bGround = {
-      backgroundColor:"rgb(60, 60, 60, 0.5)",
-      padding:"30px",
-      margin:"10px",
-      borderRadius:"5px"
-    }
+    // const bGround = {
+    //   backgroundColor:"rgb(60, 60, 60, 0.5)",
+    //   padding:"30px",
+    //   margin:"10px",
+    //   borderRadius:"5px"
+    //style={{...bGround}}
+    // }
     return (
-      <div style={{...bGround}}>
+      <div >
         <p> You are probably here because you don't know what the 
           heck Stackoverflow is talking about. Don't worry! In time
           you will. Until then, I'm here to help. 

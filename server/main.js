@@ -1,8 +1,9 @@
-
+const cors = require('cors');
 const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use(cors());
 
 const mongoose = require('mongoose');
 const termController = require('./termController');
@@ -28,16 +29,12 @@ app.use(express.urlencoded({ extended: true }));
  app.use(express.json());
 
 //static file req example
-app.use('/images', express.static(path.resolve(__dirname, '../client/assets'))); 
+//app.use('/images', express.static(path.resolve(__dirname, '../client/assets'))); 
 //post request to /search
 
-// test --- app.use('/search', (req,res) => {
-
-//   return res.send('hey!')
-// })
 // app.use('/', (req,res) => {})
 //add middleware that adds user searches to cache?
-app.get('/get', termController.getTerm)
+app.get('/get/:userEntry', termController.getTerm)
 
 app.post('/get', termController.getTerm)
  

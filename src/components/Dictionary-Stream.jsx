@@ -14,19 +14,26 @@ class Dictionary extends React.Component {
     }
     //DL cors 
     //set headers
-   onSubmit () {
-    fetch("http://localhost:3000/get", {
-      mode:"no-cors",
-      method: "post",
-      body:JSON.stringify(this.props.userEntry)})
-  //   .then(response => response.json())
-  //   .then(data => {console.log('klsfjsl;kfj',data)});
-  //  }
-  //  .catch((error) => console.log('error ', error))
+  // componentDidMount() {
+  //   fetch("/get")
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log('our data',data);
+  //     })
+  //     .catch((error) => console.log ('fetch error',error));
   // }
+   onSubmit () {
+     console.log('props ', this.state.userEntry)
+    fetch(`http://localhost:3000/get/${this.state.userEntry}`,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+
+    })
   .then(response => response.json())
       .then(data => {
-        console.log('klsfjsl;kfj',data);
+        console.log('our data',data);
       })
       .catch((error) => console.log ('fetch error',error));
   }
@@ -44,8 +51,6 @@ class Dictionary extends React.Component {
       return (
   
         <div style={{...bGround}}>
-          {console.log('user state ',this.state.userEntry)}
-          
            <form>
               <input type="search" placeholder="Enter Dev Term" className="searchBar"
               onChange={this.hideDef}/>
@@ -56,9 +61,8 @@ class Dictionary extends React.Component {
               {/* if(this.props.defRequested){
                 //set display property of class of user response/req.body.entry(term) to "inline") 
               } */}
-            
               </p>
-          <ul className="devTerms">
+          <ul class="blocks" className="devTerms">
             <li img src={this.props.data.imageUrl}> </li>
           <li className="object">Object: </li>
           <li className="def" >A data type consisting of a key to the left of 

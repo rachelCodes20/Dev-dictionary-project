@@ -58,7 +58,9 @@ const termController = {};
 //use try catch blocks with asyn await!
 termController.getTerm = async (req,res,next) => {
     let retrievedTerm;
-    let userEntry = req.body;
+    //entry from params
+    console.log('req.params ', req.params.userEntry)
+    let userEntry = req.params.userEntry;
   
         try {
             retrievedTerm = await Term.findOne({termName: userEntry})

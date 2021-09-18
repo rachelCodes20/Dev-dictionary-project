@@ -47,6 +47,10 @@ button {
     display: inline;
 }
 
+.blocks {
+    background-color: rgba(189, 180, 180, 0.5);
+}
+
 /* li{
     display:inline-block;
     padding: 10px;
@@ -58,7 +62,8 @@ button {
 .navItem {
     display: inline;
     padding: 5px;
-    border: px solid aqua; 
+    border: 1px solid aqua; 
+    /* font: rgba(189, 180, 180, 0.5) */
     font-weight: bold;
     font-size: 14px;;
     border-radius: 15px;

@@ -16,13 +16,13 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     open: true,
-    // proxy: {
-    //     '/':{
-    //       target: 'http://localhost:3000/',
-    //       secure: false,
-    //       changeOrigin: true
-    //   }
-    // }
+    proxy: {
+        '/':{
+          target: 'http://localhost:3000/',
+          secure: false,
+          changeOrigin: true
+      }
+    }
   },
   module: {
     rules: [
