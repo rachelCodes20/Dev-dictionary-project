@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import styled from 'styled-components';
 import Dictionary from './Dictionary-Stream.jsx';
+import image from '../images/js-object-.png';
 
 
 /*{<Navbar/>
@@ -26,7 +27,7 @@ class App extends React.Component {
     this.state = {
       defTerms: [{url: 'mongo url?'}],
       userEntry: "",
-      clicked: false
+      imageURL: image
     }
     
   }
@@ -80,7 +81,7 @@ class NavBar extends React.Component {
   render () {
     return (
       <ul className="navBar">
-        <li className="navItem"> Home</li>
+        <li className="navItem"> <a href="http://localhost:8080"> </a> Home</li>
         <li className="navItem"><a href=""></a>Search</li>
         <li className="navItem"><a href=""></a>Quiz Me!</li>
       </ul>
