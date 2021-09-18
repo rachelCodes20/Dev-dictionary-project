@@ -3,6 +3,7 @@ const Term = require('./term-model');
 //all my controllers for get requests go here. 
 const termController = {};
 
+
 //query db
 //add create
 //add delte
@@ -57,22 +58,19 @@ const termController = {};
 //use try catch blocks with asyn await!
 termController.getTerm = async (req,res,next) => {
     let retrievedTerm;
-    console.log('something!')
-        // const {termName} = {'athing': 'avalue'}//req.body;
+    let userEntry = req.body;
+  
         try {
-            retrievedTerm = await Term.find({termName: 'object'})
-            console.log('retrieved term', retrievedTerm);
-            //turn into json !
+            retrievedTerm = await Term.findOne({termName: userEntry})
+            //turn into json!
+            //send back termDefinition
             return res.status(200).json(retrievedTerm)
-            
             res.send(retrievedTerm);
         }
             catch(err){
             return res.status(404).send(err)
         }
     }
-
-
 // termController.getTerm =  (req,res) => {
 //        return res.send('gt term err')
      

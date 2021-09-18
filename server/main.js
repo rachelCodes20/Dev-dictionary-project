@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+
 const mongoose = require('mongoose');
 const termController = require('./termController');
 const dotenv = require('dotenv').config();
@@ -38,7 +39,7 @@ app.use('/images', express.static(path.resolve(__dirname, '../client/assets')));
 //add middleware that adds user searches to cache?
 app.get('/get', termController.getTerm)
 
-
+app.post('/get', termController.getTerm)
  
     // termRouter.get('/create', termController.createTerm);
 
@@ -67,4 +68,4 @@ app.get('/get', termController.getTerm)
 
   app.listen(PORT, () => {console.log(`listening on port ${PORT}`)});
 
-  module.exports = app;
+  // module.exports = app;

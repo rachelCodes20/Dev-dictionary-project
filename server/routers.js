@@ -19,6 +19,8 @@ const termController = require('./termController');
 //     return res.status(200).json({termName: termName, termDefinition: termDefinition});
 //   });
 
+
+
 //   // router.get('/', termController.delete, (req, res) => {
 
 //   //   return res.status(200).json({termName: termName, termDefinition: termDefinition});

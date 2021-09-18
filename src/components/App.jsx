@@ -26,10 +26,13 @@ class App extends React.Component {
     this.state = {
       defTerms: [{url: 'mongo url?'}],
       userEntry: "",
+      clicked: false
     }
     
   }
-
+  // hideDef (event) {
+  //   this.setState({userEntry: event.target.value})
+  // }
 render () {
 
     return (
@@ -40,7 +43,7 @@ render () {
         <h1 className="titles" > Welcome to the Dev's Dictionary! </h1>
           <hr/>
         <Welcome />
-        <Dictionary userEntry={this.state.userEntry}/>
+        <Dictionary data={this.state}/>
     </div>
     )
   }   
@@ -65,7 +68,7 @@ class Welcome extends React.Component {
       <div style={{...bGround}}>
         <p> You are probably here because you don't know what the 
           heck Stackoverflow is talking about. Don't worry! In time
-          you will.Until then, I'm here to help. 
+          you will. Until then, I'm here to help. 
         </p>
        
       </div>

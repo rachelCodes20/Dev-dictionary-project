@@ -1,17 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
+body {
+    background-color: grey;
+}
+p {
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    background-color: grey;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .titles {
     font-family: 'Luckiest Guy', cursive;
     font-size: 70px;
-    text-align: right;
+    text-align: center;
     border: 10px solid aqua;
     padding:20px;
     border-radius:10px;
     background-color: aqua;
 }
 .searchBar {
-height:30px;
-width:200px;
+    width: 75%;
+    border: 3px solid aqua;
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
 }
 .navBar {
     list-style-type: none;
