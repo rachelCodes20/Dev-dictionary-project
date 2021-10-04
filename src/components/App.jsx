@@ -1,7 +1,6 @@
 //import { create } from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-import styled from 'styled-components';
 import Dictionary from './Dictionary-Stream.jsx';
 import image from '../images/js-object-.png';
 
@@ -25,7 +24,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      defTerms: [{url: 'mongo url?'}],
+      defTerms: [],
       userEntry: "",
       imageURL: image
     }

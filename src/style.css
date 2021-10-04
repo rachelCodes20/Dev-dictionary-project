@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 body {
-    background-color: grey;
+    background-color: none;
 }
 
 p {
@@ -14,8 +14,8 @@ p {
 button {
     border-radius: 5px;
     box-sizing: border-box;
-    border-radius: 15px;
-    border: 1px solid aqua; 
+    border-radius: 0px;
+    border: none; 
     height: 40px;
     padding: 10px;
     background-color: grey;
@@ -62,7 +62,7 @@ button {
 .navItem {
     display: inline;
     padding: 5px;
-    border: 1px solid aqua; 
+    border: none; 
     /* font: rgba(189, 180, 180, 0.5) */
     font-weight: bold;
     font-size: 14px;;
