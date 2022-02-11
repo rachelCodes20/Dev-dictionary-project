@@ -1,7 +1,5 @@
-// import React from 'react';
- import image from '../images/js-object-.png'
+import image from '../images/js-object-.png'
 import React, { Component } from 'react';
-// import {process} from '/server/main.js'
 class Dictionary extends React.Component {
   constructor (props) {
     super(props)
@@ -12,16 +10,7 @@ class Dictionary extends React.Component {
     hideDef (event) {
       this.setState({userEntry: event.target.value})
     }
-    //DL cors 
-    //set headers
-  // componentDidMount() {
-  //   fetch("/get")
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log('our data',data);
-  //     })
-  //     .catch((error) => console.log ('fetch error',error));
-  // }
+    
    onSubmit () {
      console.log('props ', this.state.userEntry)
     fetch(`http://localhost:3000/get/${this.state.userEntry}`,{
