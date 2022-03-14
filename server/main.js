@@ -1,6 +1,5 @@
 const cors = require('cors');
 const express = require('express');
-const path = require('path');
 const app = express();
 
 app.use(cors());
@@ -9,7 +8,6 @@ const mongoose = require('mongoose');
 const termController = require('./termController');
 const dotenv = require('dotenv').config();
 const PORT = 3000;
-
 
 mongoose.connect(process.env.MONGO_URI , {
     useNewUrlParser:true,
@@ -26,29 +24,16 @@ mongoose.connect(process.env.MONGO_URI , {
 
 
 app.use(express.urlencoded({ extended: true }));
- app.use(express.json());
 
-//static file req example
+app.use(express.json());
+
 //app.use('/images', express.static(path.resolve(__dirname, '../client/assets'))); 
-//post request to /search
 
-// app.use('/', (req,res) => {})
-//add middleware that adds user searches to cache?
-app.get('/get/:userEntry', termController.getTerm)
+app.get(':userEntry', termController.getTerm)
 
 app.post('/get', termController.getTerm)
  
-    // termRouter.get('/create', termController.createTerm);
-
-//do i want user to be able to create a term or leave comments?
-    // // termRouter.post('/', termController.createTerm);
-
-    // termRouter.get('/:term', termController.getTerm);
-        // myterm.findOne({}, function (err,result) {
-        //   if(err) return err;
-      //   return res.send(result);
-      // })
-
+  // termRouter.get('/create', termController.createTerm);
 
     function errorHandler (err, req, res, next) {
       const defaultError = {
